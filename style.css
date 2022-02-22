@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope";
+}
+
+.card-container {
+  width: 50%;
+  min-width: 57rem;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+}
+
+.article-container {
+  padding: 2.2rem;
+  background-color: white;
+  position: relative;
+}
+
+.image-container > .left-image {
+  width: 400px;
+  height: 100%;
+}
+
+.texts-container > h2 {
+  font-size: 1.8em;
+  margin: 0 0 20px 0;
+}
+
+.texts-container > p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  opacity: 0.5;
+  line-height: 27px;
+  position: relative;
+}
+
+.profile-avatar-informations > .profile-image {
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem 0 0 0;
+  align-items: center;
+}
+
+.profile-container > .share {
+  height: 20px;
+}
+
+.profile-name-date > .date {
+  opacity: 0.5;
+}
+.profile-name-date > .name {
+  font-weight: 700;
+}
+
+.profile-avatar-informations {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 13rem;
+}
+
+.opened-div {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  visibility: hidden;
+  width: 10rem;
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 76%;
+  transition: 0.5s ease;
+  padding: 5px 8px;
+  border-radius: 10px;
+}
+
+.opened-div > p {
+  letter-spacing: 3px;
+  font-size: 0.8em;
+  font-weight: 100;
+  opacity: 0.5;
+}
+
+.button-share {
+  width: 25px;
+  height: 25px;
+  background-color: hsl(210, 9%, 82%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.opened-div-active {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.5s ease;
+  visibility: visible;
+  width: 12rem;
+  height: 3rem;
+  color: white;
+  position: absolute;
+  top: 67%;
+  left: 71%;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+.triangle-opened-div {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 10px solid hsl(217, 19%, 35%);
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: 100%;
+  left: 47%;
+  visibility: visible;
+}
+
+.button-share-img-active {
+  fill: white;
+}
+.button-share-active {
+  background-color: rgb(59, 58, 58);
+}
+
+footer {
+  font-weight: 500;
+  color: hsl(0, 0%, 55%);
+  position: relative;
+  top: 3rem;
+}
+
+footer > a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+footer > a:hover {
+  color: rgb(99, 98, 98);
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  .card-container {
+    width: 80%;
+    min-width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .opened-div {
+    left: 45%;
+    top: 67%;
+  }
+  .triangle-opened-div {
+    left: 55%;
+  }
+
+  .image-container > .left-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .texts-container > h2 {
+    font-size: 1.2em;
+  }
+  .texts-container > p {
+    font-size: 0.9em;
+  }
+
+  .profile-container {
+    font-size: 0.85em;
+  }
+  .profile-avatar-informations {
+    width: 80%;
+  }
+  .profile-avatar-informations > .profile-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  footer {
+    width: 80%;
+    text-align: center;
+    top: 1rem;
+  }
+}
